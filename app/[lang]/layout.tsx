@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
@@ -21,9 +21,7 @@ export const metadata: Metadata = {
     default: APP_DEFAULT_TITLE,
     template: APP_TITLE_TEMPLATE,
   },
-  viewport: {
-    interactiveWidget: "resizes-content",
-  },
+
   description: APP_DESCRIPTION,
   manifest: "/manifest.json",
   themeColor: "#FFFFFF",
@@ -53,6 +51,9 @@ export const metadata: Metadata = {
     },
     description: APP_DESCRIPTION,
   },
+};
+export const viewport: Viewport = {
+  interactiveWidget: "resizes-content",
 };
 
 export default function RootLayout({
